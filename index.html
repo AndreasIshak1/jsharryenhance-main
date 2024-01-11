@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="siteheader">
+        <div class="logo">
+            <i class='bx bxs-car logoicon'></i>
+            Car<span class="logopart2">Lovers</span>                
+        </div>
+        <nav>
+            <ul class="navmenu">
+                <li><a class="headeranchor" href="#home">Start</a></li>
+                <li><a class="headeranchor" href="#products">Bilar</a></li>
+                <li><a class="headeranchor" href="#contact">Kontakt</a></li>
+            </ul>
+        </nav>
+        <ul class="navicons">
+           <li><a class="navicons__headeranchor" href="#"><i class='bx bx-search-alt'></i></a></li> 
+           <li><a class="navicons__headeranchor" href="#"><i class='bx bx-menu' ></i></a></li> 
+        </ul>
+    </header>
+    <main>
+        <section class="home" id="home">
+            <div class="home__content">
+                <h1>HEDERLIGE HARRYS BILAR</h1>
+                <h2>En bra affär!</h2>
+                <p class="salesparagraf">
+                    Du kan lita på mig!<br />
+                    Ser jag ut som nån som ljuger eller?</p>
+                <a class="ctabutton" href="#products">Våra bilar</a>
+            </div>
+        </section>
+
+
+        <section class="products" id="products">
+            <h1>Bilarna</h1>
+            <div class="productgallery">
+
+
+            </div>
+
+        </section>
+
+
+        <section class="contact" id="contact">
+            <h1>Contact us</h1>
+            <div class="contact__content">
+                <div class="contact__map">
+                    <iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.openstreetmap.org/export/embed.html?bbox=18.077198266983036%2C59.29089595925097%2C18.087229728698734%2C59.29601295775283&amp;layer=mapnik" style="border: 1px solid black"></iframe><br/><small><a href="https://www.openstreetmap.org/#map=17/59.29345/18.08221">Visa större karta</a></small>                    
+                </div>
+                <div class="contact__form">
+                    <form action="">
+                        <h3>Get in touch</h3>
+                        <div class="contact__form__box">
+                            <i class="bx bx-user"></i>
+                            <input name="name"class="contact__form__box__input"  type="text" placeholder="name">
+                        </div>    
+                        <div class="contact__form__box">
+                            <i class="bx bx-envelope"></i>
+                            <input name="email" class="contact__form__box__input" type="text" placeholder="email">
+                        </div>    
+                        <div class="contact__form__box">
+                            <i class="bx bx-phone"></i>
+                            <input name="phone" class="contact__form__box__input" type="tel" placeholder="phone">
+                        </div>    
+                        <a href="#" class="ctabutton" id="button-contact">Contact now</a> 
+                    </form>
+                </div>
+            </div>
+
+        </section>
+
+
+    </main>
+    <footer>
+        (C) Stefan
+    </footer>
+    <script type="module" src="a.js"></script>
+</body>
+</html>
