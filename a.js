@@ -1,40 +1,37 @@
-import fakerJsFaker from "https://cdn.skypack.dev/@faker-js/faker";
+import { faker } from "https://cdn.skypack.dev/@faker-js/faker";
 
-//TODO
+// TODO
 // enhance code
-//fixa så att det blir 108 000 kr istf 108000 kr
+// fixa så att det blir 108 000 kr istf 108000 kr
 
 class Car {
-  constructor(n, t, c, f, y, i, i2) {
-    this.name = n;
-    this.type = t;
-    this.color = c;
-    this.fuel = f;
-    this.year = y;
-    this.img =
-      "https://axmjqhyyjpat.objectstorage.eu-amsterdam-1.oci.customer-oci.com/n/axmjqhyyjpat/b/randomimages/o/cars%2F" +
-      i +
-      ".png";
-    this.price = i2;
+  constructor(name, type, color, fuel, year, img, price) {
+    this.name = name;
+    this.type = type;
+    this.color = color;
+    this.fuel = fuel;
+    this.year = year;
+    this.img = `https://axmjqhyyjpat.objectstorage.eu-amsterdam-1.oci.customer-oci.com/n/axmjqhyyjpat/b/randomimages/o/cars%2F${img}.png`;
+    this.price = price;
   }
 }
 
-var cars = [];
-//Generate 20 cars
-for (var i = 0; i < 10; i++) {
-  var n = fakerJsFaker.vehicle.vehicle();
-  var t = fakerJsFaker.vehicle.type();
-  var c = fakerJsFaker.vehicle.color();
-  var f = fakerJsFaker.vehicle.fuel();
-  var y = fakerJsFaker.number.int({ min: 1970, max: 2023 });
-  var i2 = fakerJsFaker.number.int({ min: 1, max: 100 });
-  var i3 = fakerJsFaker.number.int({ min: 30, max: 200 }) * 1000;
-  cars.push(new Car(n, t, c, f, y, i2, i3));
+const cars = [];
+// Generate 20 cars
+for (let i = 0; i < 10; i++) {
+  const name = faker.vehicle.vehicle();
+  const type = faker.vehicle.type();
+  const color = faker.vehicle.color();
+  const fuel = faker.vehicle.fuel();
+  const year = faker.number.int({ min: 1970, max: 2023 });
+  const img = faker.number.int({ min: 1, max: 100 });
+  const price = faker.number.int({ min: 30, max: 200 }) * 1000;
+  cars.push(new Car(name, type, color, fuel, year, img, price));
 }
 
 function r() {
-  var c = document.getElementsByClassName("productgallery")[0];
-  var x = `<div class="productcard">
+  const c = document.getElementsByClassName("productgallery")[0];
+  const x = `<div class="productcard">
     <img src="${cars[0].img}">
     <div class="information">
         <div class="name">${cars[0].name}</div>
@@ -42,7 +39,7 @@ function r() {
         <a class="ctabutton" href="#">${cars[0].price} kr</a>
     </div>`;
   c.innerHTML += x;
-  var x2 = `<div class="productcard">
+  const x2 = `<div class="productcard">
     <img src="${cars[1].img}">
     <div class="information">
         <div class="name">${cars[1].name}</div>
@@ -51,7 +48,7 @@ function r() {
     </div>`;
   c.innerHTML += x2;
 
-  var x3 = `<div class="productcard">
+  const x3 = `<div class="productcard">
     <img src="${cars[2].img}">
     <div class="information">
         <div class="name">${cars[2].name}</div>
@@ -60,7 +57,7 @@ function r() {
     </div>`;
   c.innerHTML += x3;
 
-  var x4 = `<div class="productcard">
+  const x4 = `<div class="productcard">
     <img src="${cars[3].img}">
     <div class="information">
         <div class="name">${cars[3].name}</div>
@@ -69,7 +66,7 @@ function r() {
     </div>`;
   c.innerHTML += x4;
 
-  var x5 = `<div class="productcard">
+  const x5 = `<div class="productcard">
     <img src="${cars[4].img}">
     <div class="information">
         <div class="name">${cars[4].name}</div>
@@ -78,7 +75,7 @@ function r() {
     </div>`;
   c.innerHTML += x5;
 
-  var x6 = `<div class="productcard">
+  const x6 = `<div class="productcard">
     <img src="${cars[5].img}">
     <div class="information">
         <div class="name">${cars[5].name}</div>
@@ -87,7 +84,7 @@ function r() {
     </div>`;
   c.innerHTML += x6;
 
-  var x7 = `<div class="productcard">
+  const x7 = `<div class="productcard">
     <img src="${cars[6].img}">
     <div class="information">
         <div class="name">${cars[6].name}</div>
@@ -96,7 +93,7 @@ function r() {
     </div>`;
   c.innerHTML += x7;
 
-  var x8 = `<div class="productcard">
+  const x8 = `<div class="productcard">
     <img src="${cars[7].img}">
     <div class="information">
         <div class="name">${cars[7].name}</div>
@@ -105,7 +102,7 @@ function r() {
     </div>`;
   c.innerHTML += x8;
 
-  var x9 = `<div class="productcard">
+  const x9 = `<div class="productcard">
     <img src="${cars[8].img}">
     <div class="information">
         <div class="name">${cars[8].name}</div>
@@ -114,7 +111,7 @@ function r() {
     </div>`;
   c.innerHTML += x9;
 
-  var x10 = `<div class="productcard">
+  const x10 = `<div class="productcard">
     <img src="${cars[9].img}">
     <div class="information">
         <div class="name">${cars[9].name}</div>
