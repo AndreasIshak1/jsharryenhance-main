@@ -1,3 +1,4 @@
+/* eslint-disable import/no-unresolved */
 import { faker } from "https://cdn.skypack.dev/@faker-js/faker";
 
 // TODO
