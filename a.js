@@ -121,5 +121,4 @@ function r() {
   c.innerHTML += x10;
 }
 
-console.log(cars);
 r();
