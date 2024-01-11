@@ -1,4 +1,4 @@
-import { faker } from "https://cdn.skypack.dev/@faker-js/faker";
+import { faker } from 'https://cdn.skypack.dev/@faker-js/faker';
 
 // TODO
 // enhance code
@@ -30,7 +30,7 @@ for (let i = 0; i < 10; i++) {
 }
 
 function r() {
-  const c = document.getElementsByClassName("productgallery")[0];
+  const c = document.getElementsByClassName('productgallery')[0];
   const x = `<div class="productcard">
     <img src="${cars[0].img}">
     <div class="information">
