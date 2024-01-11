@@ -1,4 +1,4 @@
-import { faker } from 'https://cdn.skypack.dev/@faker-js/faker';
+import { faker } from "https://cdn.skypack.dev/@faker-js/faker";
 
 // TODO
 // enhance code
@@ -18,7 +18,7 @@ class Car {
 
 const cars = [];
 // Generate 20 cars
-for (let i = 0; i < 10; i++) {
+for (let i = 0; i < 10; i += 1) {
   const name = faker.vehicle.vehicle();
   const type = faker.vehicle.type();
   const color = faker.vehicle.color();
@@ -30,7 +30,7 @@ for (let i = 0; i < 10; i++) {
 }
 
 function r() {
-  const c = document.getElementsByClassName('productgallery')[0];
+  const c = document.getElementsByClassName("productgallery")[0];
   const x = `<div class="productcard">
     <img src="${cars[0].img}">
     <div class="information">
